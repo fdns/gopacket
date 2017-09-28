@@ -4,8 +4,10 @@ install:
  - go get github.com/google/gopacket/layers
  - go get github.com/google/gopacket/tcpassembly
  - go get github.com/google/gopacket/reassembly
+ - dpkg --add-architecture i386
  - sudo apt-get -qq update
  - sudo apt-get install -y libpcap-dev
+ - sudo apt-get install -y libpcap-dev:i386
 script:
  - GOARCH=386 go test github.com/google/gopacket
  - GOARCH=386 go test github.com/google/gopacket/layers
