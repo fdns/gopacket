@@ -5,10 +5,10 @@ install:
  - go get github.com/google/gopacket/tcpassembly
  - go get github.com/google/gopacket/reassembly
 script:
- - go test github.com/google/gopacket
- - go test github.com/google/gopacket/layers
- - go test github.com/google/gopacket/tcpassembly
- - go test github.com/google/gopacket/reassembly
+ - GOARCH=386 go test github.com/google/gopacket
+ - GOARCH=386 go test github.com/google/gopacket/layers
+ - GOARCH=386 go test github.com/google/gopacket/tcpassembly
+ - GOARCH=386 go test github.com/google/gopacket/reassembly
  - ./.travis.gofmt.sh
  - ./.travis.govet.sh
  - ./.travis.golint.sh
