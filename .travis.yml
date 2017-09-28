@@ -9,6 +9,8 @@ script:
  - GOARCH=386 go test github.com/google/gopacket/layers
  - GOARCH=386 go test github.com/google/gopacket/tcpassembly
  - GOARCH=386 go test github.com/google/gopacket/reassembly
+ - go test github.com/google/gopacket/pcap
+ - GOARCH=386 go test github.com/google/gopacket/pcap
  - ./.travis.gofmt.sh
  - ./.travis.govet.sh
  - ./.travis.golint.sh
