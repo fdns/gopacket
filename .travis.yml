@@ -4,6 +4,7 @@ install:
  - go get github.com/google/gopacket/layers
  - go get github.com/google/gopacket/tcpassembly
  - go get github.com/google/gopacket/reassembly
+ - apt-get install libpcap-dev
 script:
  - GOARCH=386 go test github.com/google/gopacket
  - GOARCH=386 go test github.com/google/gopacket/layers
